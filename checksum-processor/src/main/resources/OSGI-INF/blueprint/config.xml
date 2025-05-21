@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+  <reference id="messagingService"
+    interface="com.esri.ges.messaging.Messaging" />
+
+  <bean id="checksumProcessorServiceBean"
+    class="gov.odf.geoevent.processor.checksum.ChecksumProcessorService"
+    activation="eager">
+    <property name="bundleContext" ref="blueprintBundleContext" />
+    <property name="messaging" ref="messagingService" />
+  </bean>
+
+  <service id="checksumProcessorService" ref="checksumProcessorServiceBean"
+    interface="com.esri.ges.processor.GeoEventProcessorService" />
+</blueprint>
