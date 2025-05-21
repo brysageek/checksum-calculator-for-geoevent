@@ -20,7 +20,7 @@
     <contact.address>brian.c.locke@odf.oregon.gov</contact.address>
   </properties>
   <modules>
-    <module>checksum-calculator</module>
+    <module>checksum-processor</module>
   </modules>
   <dependencies>
     <dependency>

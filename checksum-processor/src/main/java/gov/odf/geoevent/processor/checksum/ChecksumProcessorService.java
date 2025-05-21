@@ -1,7 +1,4 @@
 package gov.odf.geoevent.processor.checksum;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import com.esri.ges.core.component.ComponentException;
 import com.esri.ges.core.property.PropertyException;
 import com.esri.ges.manager.geoeventdefinition.GeoEventDefinitionManager;
@@ -13,7 +10,7 @@ public class ChecksumProcessorService extends GeoEventProcessorServiceBase
 {
     GeoEventDefinitionManager manager;
 	Messaging messaging;
-	private static final Log LOG = LogFactory.getLog(ChecksumProcessorService.class);
+	//private static final Log LOG = LogFactory.getLog(ChecksumProcessorService.class);
 	public ChecksumProcessorService() throws PropertyException {
 		definition = new ChecksumProcessorDefinition();
 	}

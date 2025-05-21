@@ -18,8 +18,6 @@ public class ChecksumProcessorDefinition extends GeoEventProcessorDefinitionBase
     private static final String       CHECKSUM_STARTING_CHAR_DESC           = STRINGS_PATH + "CHECKSUM_STARTING_CHAR_DESC}";
     private static final String       CHECKSUM_ENDING_CHAR_LABEL            = STRINGS_PATH + "CHECKSUM_ENDING_CHAR_LABEL}";
     private static final String       CHECKSUM_ENDING_CHAR_DESC             = STRINGS_PATH + "CHECKSUM_ENDING_CHAR_DESC}";
-	private static final String 	  GEOEVENT_DEFINITION_NAME_LABEL        = STRINGS_PATH + "GEOEVENT_DEFINITION_NAME_LABEL}";
-	private static final String 	  GEOEVENT_DEFINITION_NAME_DESC         = STRINGS_PATH + "GEOEVENT_DEFINITION_NAME_DESC}";
     private static final String       CHECKSUM_FIELD_LABEL                  = STRINGS_PATH + "CHECKSUM_FIELD_LABEL}";
     private static final String       CHECKSUM_FIELD_DESC                   = STRINGS_PATH + "CHECKSUM_FIELD_DESC}";
 
@@ -28,10 +26,9 @@ public class ChecksumProcessorDefinition extends GeoEventProcessorDefinitionBase
 		LOGGER.info("Creating Definition for Checksum Calculator");
 			
         try {
-                propertyDefinitions.put(SENTENCE_FIELD_NAME, new PropertyDefinition(SENTENCE_FIELD_NAME, PropertyType.String, "",SENTENCE_NAME_LABEL, SENTENCE_NAME_DESC, true, false ));
+			    propertyDefinitions.put(SENTENCE_FIELD_NAME, new PropertyDefinition(SENTENCE_FIELD_NAME, PropertyType.String, "",SENTENCE_NAME_LABEL, SENTENCE_NAME_DESC, true, false ));
                 propertyDefinitions.put(CHECKSUM_STARTING_CHAR, new PropertyDefinition(CHECKSUM_STARTING_CHAR, PropertyType.String, "$", CHECKSUM_STARTING_CHAR_LABEL, CHECKSUM_STARTING_CHAR_DESC, false, false));
                 propertyDefinitions.put(CHECKSUM_ENDING_CHAR, new PropertyDefinition(CHECKSUM_ENDING_CHAR, PropertyType.String, "*", CHECKSUM_ENDING_CHAR_LABEL, CHECKSUM_ENDING_CHAR_DESC, false, false));
-                propertyDefinitions.put(GEOEVENT_DEFINITION_NAME, new PropertyDefinition(GEOEVENT_DEFINITION_NAME, PropertyType.String, "", GEOEVENT_DEFINITION_NAME_LABEL, GEOEVENT_DEFINITION_NAME_DESC, true, false));
 				propertyDefinitions.put(CHECKSUM_FIELD, new PropertyDefinition(CHECKSUM_FIELD, PropertyType.String, "*", CHECKSUM_FIELD_LABEL, CHECKSUM_FIELD_DESC, true, false));
         }
         catch (PropertyException e) {
